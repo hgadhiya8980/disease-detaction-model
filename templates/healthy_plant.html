@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <title>Plant Disease detaction model</title>
+        <style>
+            * {
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif;
+            box-sizing: border-box;
+            }
+            .imshow
+            {
+                width: 100%;
+                height: 400px;
+            }
+            .columns
+            {
+                width: 100%;
+                height: 700px;
+                box-sizing: border-box;
+                background-color: aliceblue;
+
+            }
+            .img-thumbnail
+            {
+                width: 600px;
+                height: 600px;
+                padding: 50px 0;
+
+            }
+            .col-contain
+            {
+                min-height: 400px;
+                background-color: rgb(122, 121, 121);
+            }
+            .Disease
+            {
+                color: white;
+                font-size: 35px;
+                padding-top: 30px;
+                text-align: center;
+                font-weight: bold;
+            }
+            .output
+            {
+                margin: 50px 100px 0 50px;
+            }
+            .output h3{
+                font-size: 20px;
+                color: rgb(85, 74, 74);
+                margin-top: 10px;
+                padding-bottom: 30px;
+                margin-left: 50px;
+                line-height: 35px;
+            }
+            .footer h3{
+                background-color: #333;
+                color: white;
+                text-align: center;
+                padding: 20px;
+                font-size: 25px;
+                font-weight: bold;
+                font-family: sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <div class="imgshow">
+                <img src="static\images\banner.png" class="imshow">
+            </div>
+        </div>
+        <div class="container">
+            <div class="source">
+    
+                <div class="columns">
+                    <span class="border border-primary">
+                        <center><img src="{{ user_image }}" alt="User Image" class="img-thumbnail"></center>
+                        <!-- <img src="{{pred_output}}" alt="User Image" class="img-thumbnail"> -->
+                    </span>
+                </div>
+    
+                <div class="col-contain">
+    
+                    <div class="pred">
+                        <h1 class="Disease">
+                            {{pred_output}} 
+                        </h1>
+                    </div>
+                    <div class="output">
+                        <h3>There is no disease on the cotton Plant.</br>
+                            कपास के पेड़ पर कोई बीमारी नहीं है। </br>
+                            कपाशीच्या झाडावर कोणताही रोग नाही आहे. </br>
+                            કપાસના ઝાડ ઉપર કોઈ રોગ નથી.</br>
+                            ಹತ್ತಿ ಮರದ ಮೇಲೆ ಯಾವುದೇ ರೋಗವಿಲ್ಲ..</br>
+                            పత్తి చెట్టుపై వ్యాధి లేదు..</br>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <h3>
+                Delivery Contact:
+                hgadhiya8980@gmail.com
+            </h3>
+        </div>
+    </body>
+</html>

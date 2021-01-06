@@ -1,0 +1,191 @@
+<html>
+    <head>
+        <title>Plant Disease detaction model</title>
+        <style>
+            * {
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif;
+            box-sizing: border-box;
+            }
+            .imshow
+            {
+                width: 100%;
+                height: 400px;
+            }
+            .columns
+            {
+                width: 100%;
+                height: 700px;
+                box-sizing: border-box;
+                background-color: aliceblue;
+
+            }
+            .img-thumbnail
+            {
+                width: 600px;
+                height: 600px;
+                padding: 50px 0;
+
+            }
+            .col-contain
+            {
+                height: 400px;
+                background-color: rgb(122, 121, 121);
+            }
+            .Disease
+            {
+                color: white;
+                font-size: 35px;
+                padding-top: 30px;
+                text-align: center;
+                font-weight: bold;
+            }
+            .output
+            {
+                margin: 50px 100px;
+            }
+            .output h2
+            {
+                color:#333;
+                font-size: 25px;
+            }
+            .output h3{
+                font-size: 20px;
+                color: rgb(85, 74, 74);
+                margin-top: 10px;
+                margin-left: 50px;
+                line-height: 35px;
+            }
+            .solution
+            {
+                min-height: 400px;
+                padding: 50px 100px;
+                background-color: rgb(190, 184, 184);
+            }
+            .solution h1
+            {
+                color:#333;
+                font-size: 25px;
+            }
+            .solution p
+            {
+                font-size: 18px;
+                color: rgb(85, 74, 74);
+                margin-top: 10px;
+                margin-left: 50px;
+                line-height: 30px;
+            }
+            .main
+            {
+                min-height: 800px;
+                background-color: white;
+                padding: 50px 100px;
+            }
+            .main h1
+            {
+                color:rgb(85, 74, 74);
+                font-size: 35px;
+                text-align: center;
+            }
+            .g1
+            {
+                border: 3px solid black;
+                background-color: #777;
+                border-radius: 50px 0 50px 0;
+                width: 250px;
+                height: 400px;
+                margin: 50px;
+                padding: 20px;
+            }
+            .g1:hover
+            {
+                background-color: rgb(241, 183, 183);
+                border-radius: 0 50px 0 50px ;
+                transition-delay: 0.8ms ;
+            }
+            .footer h3{
+                background-color: #333;
+                color: white;
+                text-align: center;
+                padding: 20px;
+                font-size: 25px;
+                font-weight: bold;
+                font-family: sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <div class="imgshow">
+                <img src="static\images\banner.png" class="imshow">
+            </div>
+        </div>
+        <div class="container">
+            <div class="source">
+    
+                <div class="columns">
+                    <span class="border border-primary">
+                        <center><img src="{{ user_image }}" alt="User Image" class="img-thumbnail"></center>
+                        <!-- <img src="{{pred_output}}" alt="User Image" class="img-thumbnail"> -->
+                    </span>
+                </div>
+    
+                <div class="col-contain">
+    
+                    <div class="pred">
+                        <h1 class="Disease">
+                            {{pred_output}} 
+                        </h1>
+                    </div>
+                    <div class="output">
+                        <h2>Disease Name / रोग का नाम / रोगाचे नाव / રોગ નામ / ರೋಗದ ಹೆಸರು / వ్యాధి పేరు :</h2>
+                        <h3>Attack of Leaf Sucking and Chewing Pests <br> चुरडा,मावा रोग <br> લીફ
+                        ચૂસીને જીવાતો જીવાતોનો હુમલો <br> ಎಲೆ ಹೀರುವ ಮತ್ತು ಚೂಯಿಂಗ್ ಕೀಟಗಳ ದಾಳಿ <br> ఆకు పీల్చటం మరియు చూయింగ్ తెగుళ్ళ దాడి
+                        </h3>
+                    </div>
+                </div>
+            
+    
+                <div class="solution">
+                    <h1> Solution for Disease / रोग का उपचार / रोगाचा उपाय / રોગનો ઉપાય / ರೋಗಕ್ಕೆ ಪರಿಹಾರ / వ్యాధికి పరిష్కారం: </h1>
+                        <p><strong>Use any one Systemic Insecticide, which contain<i> Flonicamid 50%/ Thiamethoxam 25% WG / Imidacloprid
+                        17.8 Sl / Acetamiprid 20% SP.</i></strong></p>
+                        <p>किसी भी एक प्रणालीगत कीटनाशक का प्रयोग करें, जिसमें फ्लोनिकमिड ५०% / थियामेथोक्साम 25% WG / इमिडाक्लोप्रिड
+                            १७.८
+                             एसएल / एसिटामिप्रिड २०% एसपी है।</p>
+                        <p>कोणत्याही एक सिस्टीमिक कीटकनाशकाचा वापर करा, ज्यात फ्लोनीकायमिड ५०% / थियॅमेथॉक्सम 25% WG / इमिडाक्लोप्रिड
+                            १७.८
+                            एसएल / एसीटामिप्रिड २०% एसपी असेल.</p>
+                        <p>કોઈપણ એક પ્રણાલીગત જંતુનાશક દવાઓનો ઉપયોગ કરો, જેમાં ફ્લોનીકેમિડ 50% / થાઇઆમેથોક્સમ 25% WG / ઇમિડાકલોપ્રિડ
+                            17.8
+                            એસએલ / એસેટામિપ્રિડ 20% એસપી હોય છે.</p>
+                        <p>ಫ್ಲೋನಿಕಾಮಿಡ್ 50% / ಥಿಯಾಮೆಥೊಕ್ಸಮ್ 25% WG / ಇಮಿಡಾಕ್ಲೋಪ್ರಿಡ್ 17.8 ಎಸ್ಎಲ್ / ಅಸೆಟಾಮಿಪ್ರಿಡ್ 20% ಎಸ್ಪಿ ಹೊಂದಿರುವ
+                            ಯಾವುದೇ
+                            ಒಂದು ವ್ಯವಸ್ಥಿತ ಕೀಟನಾಶಕವನ್ನು ಬಳಸಿ.</p>
+                        <p>ఫ్లోనికామిడ్ 50% / థియామెథోక్సామ్ 25% WG / ఇమిడాక్లోప్రిడ్ 17.8 స్లా / ఎసిటామిప్రిడ్ 20% ఎస్పిని కలిగి ఉన్న
+                            ఏదైనా
+                            ఒక దైహిక పురుగుమందును వాడండి.</p>
+                </div>
+            </div>
+        </div>
+        <div class="gallary">
+            <div class="main">
+                <h1>Gallary</h1>
+                    <center><img src="static\images\actara.png" class="g1" placeholder="actara">
+                    <img src="static\images\confidor.png" class="g1" placeholder="confidor">
+                    <img src="static\images\victor.png" class="g1" placeholder="victor"><br>
+                    <img src="static\images\ulala.png" class="g1" placeholder="ulala">
+                    <img src="static\images\preet.png" class="g1" placeholder="preet">
+                    <img src="static\images\panama.png" class="g1" placeholder="panama">
+                </center>
+            </div>
+        </div>
+        <div class="footer">
+            <h3>
+                Delivery Contact:
+                hgadhiya8980@gmail.com
+            </h3>
+        </div>
+    </body>
+</html>
